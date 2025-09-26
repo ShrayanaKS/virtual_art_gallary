@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Virtual Art Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.141.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.141.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="info-panel">
+    <h1>The Digital Canvas: A Virtual Exhibition</h1>
+    <p>Click and drag to look around. Scroll to zoom in/out.</p>
+    <p>Click on an artwork to see its details.</p>
+</div>
+
+<div id="controls-panel">
+    <button id="audio-button" class="ui-button">Play Audio</button>
+    <button id="tour-button" class="ui-button">Guided Tour</button>
+</div>
+
+<div id="artwork-modal" class="modal-details">
+    <button id="close-modal">&times;</button>
+    <h3 id="modal-title"></h3>
+    <p id="modal-artist"></p>
+    <img id="modal-image" src="" alt="Artwork">
+    <p id="modal-description"></p>
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
